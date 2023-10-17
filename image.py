@@ -7,13 +7,13 @@ content = """
 <body>
 <h1>Welcome</h1>
 </body>
-</html>f
+</html>
 """
 
 class HelloHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        self.self_response(200)
-        self.send_handler('Content-type','text/html; charset=utf-8')
+        self.send_response(200)
+        self.send_header('Content-type','text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
 

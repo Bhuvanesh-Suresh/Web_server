@@ -1,6 +1,7 @@
 # Developing a Simple Webserver
 ## Name:Bhuvanesh.S.R
 ## Ref no:23013380
+## Dept:AIML
 # AIM:
 
 Develop a webserver to display about top five web application development frameworks.
@@ -27,6 +28,7 @@ Serving the HTML pages.
 
 Testing the webserver
 # PROGRAM:
+```
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 content = """
@@ -36,7 +38,7 @@ content = """
 <body>
 <h1>Welcome</h1>
 </body>
-</html>f
+</html>
 """
 
 class HelloHandler(BaseHTTPRequestHandler):
@@ -50,7 +52,9 @@ class HelloHandler(BaseHTTPRequestHandler):
 server_address = ('', 80)
 httpd = HTTPServer (server_address, HelloHandler)
 httpd.serve_forever()
+```
 # OUTPUT:
+![Output](/webserver.jpg)
 
 # RESULT:
 
